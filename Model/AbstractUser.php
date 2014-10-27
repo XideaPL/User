@@ -1,0 +1,144 @@
+<?php
+
+/*
+ * (c) Xidea Artur Pszczółka <biuro@xidea.pl>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Xidea\Component\User\Model;
+
+/**
+ */
+abstract class AbstractUser implements UserInterface
+{
+    /*
+     * @var int
+     */
+    protected $id;
+    
+    /*
+     * @var string
+     */
+    protected $username;
+
+    /*
+     * @var string
+     */
+    protected $salt;
+    
+    /*
+     * @var string
+     */
+    protected $password;
+    
+    /*
+     * @var string
+     */
+    protected $plainPassword;
+    
+    public function __construct()
+    {
+        $this->salt = md5(uniqid(null, true));
+        $this->roles = array('ROLE_USER');
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getSalt()
+    {
+        return $this->salt;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
+    }
+
+    /**
+     * @see \Serializable::serialize()
+     */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->username,
+            // see section on salt below
+            // $this->salt,
+        ));
+    }
+
+    /**
+     * @see \Serializable::unserialize()
+     */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->username,
+            // see section on salt below
+            // $this->salt
+        ) = unserialize($serialized);
+    }
+}
