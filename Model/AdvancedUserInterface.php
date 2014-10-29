@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\User;
+namespace Xidea\Component\User\Model;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
