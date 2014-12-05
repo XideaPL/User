@@ -43,11 +43,6 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
      * @var datetime
      */
     protected $lastLogin;
-    
-    /*
-     * @var array
-     */
-    protected $roles;
 
     public function __construct()
     {
@@ -149,45 +144,5 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
     public function setLastLogin(\DateTime $lastLogin = null)
     {
         $this->lastLogin = $lastLogin;
-    }
-    
-    /**
-     * @inheritDoc
-     */
-    public function setRoles(array $roles)
-    {
-        $this->roles = $roles;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getRoles()
-    {
-        return array('ROLE_USER');
-    }
-    
-    /**
-     * @inheritDoc
-     */
-    public function addRole($role)
-    {
-        $this->roles[] = $role;
-    }
-    
-    /**
-     * @inheritDoc
-     */
-    public function removeRole($role)
-    {
-        unset($this->roles[$role]);
-    }
-    
-    /**
-     * @inheritDoc
-     */
-    public function hasRole($role)
-    {
-        return isset($this->roles[$role]);
     }
 }

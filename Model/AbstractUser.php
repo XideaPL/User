@@ -38,6 +38,11 @@ abstract class AbstractUser implements UserInterface
      */
     protected $plainPassword;
     
+    /*
+     * @var array
+     */
+    protected $roles;
+    
     public function __construct()
     {
         $this->salt = md5(uniqid(null, true));
@@ -140,5 +145,45 @@ abstract class AbstractUser implements UserInterface
             // see section on salt below
             // $this->salt
         ) = unserialize($serialized);
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setRoles(array $roles)
+    {
+        $this->roles = $roles;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getRoles()
+    {
+        return array('ROLE_USER');
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function addRole($role)
+    {
+        $this->roles[] = $role;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function removeRole($role)
+    {
+        unset($this->roles[$role]);
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function hasRole($role)
+    {
+        return isset($this->roles[$role]);
     }
 }

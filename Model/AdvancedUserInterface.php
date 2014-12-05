@@ -87,40 +87,4 @@ interface AdvancedUserInterface extends UserInterface
      * @param \DateTime $lastLogin
      */
     function setLastLogin(\DateTime $lastLogin = null);
-    
-    /**
-     * @param string $role
-     *
-     * @return boolean
-     */
-    function hasRole($role);
-
-    /**
-     * Sets the roles of the user.
-     *
-     * This overwrites any previous roles.
-     *
-     * @param array $roles
-     *
-     * @return self
-     */
-    function setRoles(array $roles);
-
-    /**
-     * Adds a role to the user.
-     *
-     * @param string $role
-     *
-     * @return self
-     */
-    function addRole($role);
-
-    /**
-     * Removes a role to the user.
-     *
-     * @param string $role
-     *
-     * @return self
-     */
-    function removeRole($role);
 }
