@@ -25,47 +25,47 @@ abstract class UserEvents
     const POST_SAVE = 'xidea_user.user.post_save';
     
     /**
-     * The REGISTRATION_INITIALIZE event occurs when the registration process is initialized.
+     * The CREATE_INITIALIZE event occurs when the create process is initialized.
      */
-    const REGISTRATION_INITIALIZE = 'xidea_user.user.registration_initialize';
+    const CREATE_INITIALIZE = 'xidea_user.user.create_initialize';
     
     /**
-     * The PRE_REGISTRATION event occurs when the registration process is initialized.
+     * The PRE_CREATE event occurs when the create process is initialized.
      */
-    const PRE_REGISTRATION = 'xidea_user.user.pre_registration';
+    const PRE_CREATE = 'xidea_user.user.pre_create';
     
     /**
-     * The REGISTRATION_SUCCESS event occurs when the registration process is initialized.
+     * The CREATE_SUCCESS event occurs when the create process is initialized.
      */
-    const REGISTRATION_SUCCESS = 'xidea_user.user.registration_success';
+    const CREATE_SUCCESS = 'xidea_user.user.create_success';
     
     /**
-     * The REGISTRATION_FORM_VALID event occurs when the registration process is initialized.
+     * The CREATE_FORM_VALID event occurs when the create process is initialized.
      */
-    const REGISTRATION_FORM_VALID = 'xidea_user.user.registration_form_valid';
+    const CREATE_FORM_VALID = 'xidea_user.user.create_form_valid';
     
     /**
-     * The REGISTRATION_COMPLETED event occurs when the registration process is initialized.
+     * The CREATE_COMPLETED event occurs when the create process is initialized.
      */
-    const REGISTRATION_COMPLETED = 'xidea_user.user.registration_completed';
+    const CREATE_COMPLETED = 'xidea_user.user.create_completed';
     
     /**
-     * The CHANGE_PASSWORD_INITIALIZE event occurs when the registration process is initialized.
+     * The CHANGE_PASSWORD_INITIALIZE event occurs when the create process is initialized.
      */
     const CHANGE_PASSWORD_INITIALIZE = 'xidea_user.user.change_password_initialize';
     
     /**
-     * The CHANGE_PASSWORD_SUCCESS event occurs when the registration process is initialized.
+     * The CHANGE_PASSWORD_SUCCESS event occurs when the create process is initialized.
      */
     const CHANGE_PASSWORD_SUCCESS = 'xidea_user.user.change_password_success';
     
     /**
-     * The CHANGE_PASSWORD_FORM_VALID event occurs when the registration process is initialized.
+     * The CHANGE_PASSWORD_FORM_VALID event occurs when the create process is initialized.
      */
     const CHANGE_PASSWORD_FORM_VALID = 'xidea_user.user.change_password_form_valid';
     
     /**
-     * The CHANGE_PASSWORD_COMPLETED event occurs when the registration process is initialized.
+     * The CHANGE_PASSWORD_COMPLETED event occurs when the create process is initialized.
      */
     const CHANGE_PASSWORD_COMPLETED = 'xidea_user.user.change_password_completed';
 }
