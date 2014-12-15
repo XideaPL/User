@@ -9,7 +9,7 @@
 
 namespace Xidea\Component\User\Manager;
 
-use Xidea\Component\User\UserInterface;
+use Xidea\Component\User\Model\UserInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
