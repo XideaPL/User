@@ -7,10 +7,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\User\Model\Builder;
+namespace Xidea\Component\User\Builder;
 
-use Xidea\Component\User\Model\Factory\UserFactoryInterface,
-    Xidea\Component\User\Model\MemberInterface;
+use Xidea\Component\User\Factory\UserFactoryInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>

@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\User\Model\Builder;
+namespace Xidea\Component\User\Builder;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
