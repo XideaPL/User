@@ -19,7 +19,7 @@ interface UserLoaderInterface
      * 
      * @param int $id
      * 
-     * @return Xidea\Component\User\UserInterface
+     * @return \Xidea\Component\User\UserInterface
      */
     function load($id);
     
@@ -36,4 +36,13 @@ interface UserLoaderInterface
      * @return array
      */
     function loadBy(array $criteria, array $orderBy = array(), $limit = null, $offset = null);
+    
+    /**
+     * Returns a user by username.
+     * 
+     * @param string $username
+     * 
+     * @return \Xidea\Component\User\UserInterface
+     */
+    function loadOneByUsername($username);
 }
