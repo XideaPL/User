@@ -56,6 +56,14 @@ abstract class AbstractUser implements UserInterface
     {
         return $this->id;
     }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getName()
+    {
+        return $this->getUsername();
+    }
 
     /**
      * @inheritDoc

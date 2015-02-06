@@ -21,6 +21,13 @@ interface UserInterface extends \Serializable
      * @return string The user id
      */
     function getId();
+    
+    /**
+     * Gets the name.
+     * 
+     * @return string
+     */
+    function getName();
 
     /**
      * Gets the username.

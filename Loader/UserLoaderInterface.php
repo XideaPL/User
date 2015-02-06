@@ -9,10 +9,12 @@
 
 namespace Xidea\Component\User\Loader;
 
+use Xidea\Component\Base\Loader\ObjectLoaderInterface;
+
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-interface UserLoaderInterface
+interface UserLoaderInterface extends ObjectLoaderInterface
 {
     /**
      * Returns a user by id.
@@ -22,20 +24,6 @@ interface UserLoaderInterface
      * @return \Xidea\Component\User\UserInterface
      */
     function load($id);
-    
-    /**
-     * Returns all categories.
-     * 
-     * @return array
-     */
-    function loadAll();
-    
-    /**
-     * Returns a set of categories matching the criteria.
-     * 
-     * @return array
-     */
-    function loadBy(array $criteria, array $orderBy = array(), $limit = null, $offset = null);
     
     /**
      * Returns a user by username.
