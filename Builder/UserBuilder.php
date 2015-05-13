@@ -9,7 +9,7 @@
 
 namespace Xidea\Component\User\Builder;
 
-use Xidea\Component\User\Factory\UserFactoryInterface;
+use Xidea\Component\Base\Factory\ModelFactoryInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
@@ -27,11 +27,11 @@ class UserBuilder implements UserBuilderInterface
     /**
      * User factory.
      *
-     * @var UserFactoryInterface
+     * @var ModelFactoryInterface
      */
     protected $factory;
 
-    public function __construct(UserFactoryInterface $userFactory)
+    public function __construct(ModelFactoryInterface $userFactory)
     {
         $this->factory = $userFactory;
     }
