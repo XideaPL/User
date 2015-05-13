@@ -9,12 +9,12 @@
 
 namespace Xidea\Component\User\Loader;
 
-use Xidea\Component\Base\Loader\ObjectLoaderInterface;
+use Xidea\Component\Base\Loader\ModelLoaderInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-interface UserLoaderInterface extends ObjectLoaderInterface
+interface UserLoaderInterface extends ModelLoaderInterface
 {
     /**
      * Returns a user by id.
