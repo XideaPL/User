@@ -29,7 +29,7 @@ interface AdvancedUserInterface extends UserInterface
     function setEmail($email);
 
     /**
-     * @param boolean $boolean
+     * @param boolean $isEnabled
      *
      * @return self
      */
@@ -55,29 +55,44 @@ interface AdvancedUserInterface extends UserInterface
      * @return self
      */
     function setConfirmationToken($confirmationToken);
+    
+    /**
+     * Gets the profile.
+     * 
+     * @return ProfileInterface
+     */
+    function getProfile();
+    
+    /**
+     * Sets the profile.
+     * 
+     * @param ProfileInterface
+     */
+    function setProfile(ProfileInterface $profile);
+
 
     /**
-     * @return datetime
+     * @return \DateTime
      */
     function getCreatedAt();
     
     /**
-     * @param datetime $createdAt
+     * @param \DateTime $createdAt
      */
     function setCreatedAt(\DateTime $createdAt = null);
 
     /**
-     * @return datetime
+     * @return \DateTime
      */
     function getUpdatedAt();
     
     /**
-     * @param datetime $updatedAt
+     * @param \DateTime $updatedAt
      */
     function setUpdatedAt(\DateTime $updatedAt = null);
 
     /**
-     * @return datetime
+     * @return \DateTime
      */
     function getLastLogin();
     

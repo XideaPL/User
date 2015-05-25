@@ -31,6 +31,10 @@ class UserBuilder implements UserBuilderInterface
      */
     protected $factory;
 
+    /**
+     * 
+     * @param ModelFactoryInterface $userFactory
+     */
     public function __construct(ModelFactoryInterface $userFactory)
     {
         $this->factory = $userFactory;

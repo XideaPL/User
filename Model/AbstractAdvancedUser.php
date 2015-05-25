@@ -30,20 +30,28 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
     protected $confirmationToken;
     
     /*
-     * @var datetime
+     * @var ProfileInterface
+     */
+    protected $profile;
+    
+    /*
+     * @var \DateTime
      */
     protected $createdAt;
     
     /*
-     * @var datetime
+     * @var \DateTime
      */
     protected $updatedAt;
     
     /*
-     * @var datetime
+     * @var \DateTime
      */
     protected $lastLogin;
 
+    /**
+     * 
+     */
     public function __construct()
     {
         $this->isEnabled = true;
@@ -64,6 +72,8 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
     public function setEmail($email)
     {
         $this->email = $email;
+        
+        return $this;
     }
     
     /**
@@ -72,6 +82,8 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
     public function setIsEnabled($isEnabled)
     {
         $this->isEnabled = $isEnabled;
+        
+        return $this;
     }
     
     /**
@@ -96,6 +108,26 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
     public function setConfirmationToken($confirmationToken)
     {
         $this->confirmationToken = $confirmationToken;
+        
+        return $this;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getProfile()
+    {
+        return $this->profile;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setProfile(ProfileInterface $profile)
+    {
+        $this->profile = $profile;
+        
+        return $this;
     }
     
     /**
@@ -112,6 +144,8 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
     public function setCreatedAt(\DateTime $createdAt = null)
     {
         $this->createdAt = $createdAt;
+        
+        return $this;
     }
     
     /**
@@ -128,6 +162,8 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
     public function setUpdatedAt(\DateTime $updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
+        
+        return $this;
     }
     
     /**
@@ -144,5 +180,7 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
     public function setLastLogin(\DateTime $lastLogin = null)
     {
         $this->lastLogin = $lastLogin;
+        
+        return $this;
     }
 }
