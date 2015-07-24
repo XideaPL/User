@@ -33,4 +33,14 @@ interface UserLoaderInterface extends ModelLoaderInterface
      * @return \Xidea\Component\User\UserInterface
      */
     function loadOneByUsername($username);
+    
+    /**
+     * Returns a set of objects.
+     * 
+     * @param int $page
+     * @param int $limit
+     * 
+     * @return array
+     */
+    function loadByPage($page = 1, $limit = 25);
 }
