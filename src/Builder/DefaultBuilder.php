@@ -7,14 +7,15 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\User\Builder;
+namespace Xidea\User\Builder;
 
+use Xidea\User\BuilderInterface;
 use Xidea\Component\Base\Factory\ModelFactoryInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-class UserBuilder implements UserBuilderInterface
+class DefaultBuilder implements BuilderInterface
 {
 
     /**

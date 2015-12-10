@@ -12,7 +12,7 @@ namespace Xidea\Component\User;
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-abstract class UserEvents
+abstract class Events
 {
     /**
      * The PRE_SAVE event occurs when the user is saved.

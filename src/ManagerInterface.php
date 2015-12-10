@@ -7,14 +7,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\User\Manager;
+namespace Xidea\User;
 
-use Xidea\Component\User\Model\UserInterface;
+use Xidea\User\UserInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-interface UserManagerInterface
+interface ManagerInterface
 {
     /**
      * Saves a user.

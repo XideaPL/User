@@ -7,15 +7,20 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\User\Builder;
+namespace Xidea\User;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-interface UserDirectorInterface
+interface BuilderInterface
 {
     /**
-     * @return \Xidea\Component\User\Model\UserInterface
+     * @return void
      */
-    function build();
+    function create();
+    
+    /**
+     * @return \Xidea\User\UserInterface
+     */
+    function getUser();
 }

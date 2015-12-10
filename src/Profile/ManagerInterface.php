@@ -7,14 +7,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\User\Manager;
+namespace Xidea\User\Profile;
 
-use Xidea\Component\User\Model\ProfileInterface;
+use Xidea\User\ProfileInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-interface ProfileManagerInterface
+interface ManagerInterface
 {
     /**
      * Saves a profile.

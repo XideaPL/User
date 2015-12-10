@@ -9,22 +9,25 @@
 
 namespace Xidea\Component\User\Builder;
 
+use Xidea\User\DirectorInterface;
+use Xidea\User\BuilderInterface;
+
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-class UserDirector implements UserDirectorInterface
+class DefaultDirector implements DirectorInterface
 {
-    protected $userBuilder;
+    protected $builder;
 
-    public function __construct(UserBuilderInterface $userBuilder)
+    public function __construct(BuilderInterface $builder)
     {
-        $this->userBuilder = $userBuilder;
+        $this->builder = $builder;
     }
     
     public function build()
     {
-        $this->userBuilder->create();
+        $this->builder->create();
         
-        return $this->userBuilder->getUser();
+        return $this->builder->getUser();
     }
 }

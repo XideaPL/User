@@ -7,21 +7,21 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\User\Loader;
+namespace Xidea\User;
 
 use Xidea\Component\Base\Loader\ModelLoaderInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
  */
-interface UserLoaderInterface extends ModelLoaderInterface
+interface LoaderInterface extends ModelLoaderInterface
 {
     /**
      * Returns a user by id.
      * 
      * @param int $id
      * 
-     * @return \Xidea\Component\User\UserInterface
+     * @return \Xidea\User\UserInterface
      */
     function load($id);
     
@@ -30,7 +30,7 @@ interface UserLoaderInterface extends ModelLoaderInterface
      * 
      * @param string $username
      * 
-     * @return \Xidea\Component\User\UserInterface
+     * @return \Xidea\User\UserInterface
      */
     function loadOneByUsername($username);
     
