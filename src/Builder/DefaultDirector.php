@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\Component\User\Builder;
+namespace Xidea\User\Builder;
 
 use Xidea\User\DirectorInterface;
 use Xidea\User\BuilderInterface;
