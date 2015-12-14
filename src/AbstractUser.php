@@ -11,7 +11,7 @@ namespace Xidea\User;
 
 /**
  */
-abstract class AbstractUser implements UserInterface
+abstract class AbstractUser implements UserInterface, HasRolesInterface
 {
     /*
      * @var int
