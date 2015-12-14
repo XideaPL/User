@@ -9,7 +9,7 @@
 
 namespace Xidea\User;
 
-use Xidea\Component\Base\Loader\ModelLoaderInterface;
+use Xidea\Base\Model\LoaderInterface as ModelLoaderInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
