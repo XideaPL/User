@@ -10,7 +10,7 @@
 namespace Xidea\User\Builder;
 
 use Xidea\User\BuilderInterface;
-use Xidea\Component\Base\Factory\ModelFactoryInterface;
+use Xidea\Base\Model\FactoryInterface as ModelFactoryInterface;
 
 /**
  * @author Artur Pszczółka <a.pszczolka@xidea.pl>
