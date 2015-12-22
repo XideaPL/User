@@ -30,7 +30,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="Gaufrette Test Suite">
+        <testsuite name="Xidea User Test Suite">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>

@@ -42,13 +42,7 @@ abstract class AbstractUser implements UserInterface, HasRolesInterface
      * @var array
      */
     protected $roles;
-    
-    public function __construct()
-    {
-        $this->salt = md5(uniqid(null, true));
-        $this->roles = array('ROLE_USER');
-    }
-    
+
     /**
      * @inheritDoc
      */
@@ -168,7 +162,7 @@ abstract class AbstractUser implements UserInterface, HasRolesInterface
      */
     public function getRoles()
     {
-        return array('ROLE_USER');
+        return $this->roles;
     }
     
     /**
@@ -176,7 +170,9 @@ abstract class AbstractUser implements UserInterface, HasRolesInterface
      */
     public function addRole($role)
     {
-        $this->roles[] = $role;
+        if(!$this->hasRole($role->getName())) {
+            $this->roles[] = $role;
+        }
     }
     
     /**
@@ -184,7 +180,10 @@ abstract class AbstractUser implements UserInterface, HasRolesInterface
      */
     public function removeRole($role)
     {
-        unset($this->roles[$role]);
+        foreach($this->roles as $key => $userRole) {
+            if($userRole->getName() == $role->getName())
+                unset($this->roles[$key]);
+        }
     }
     
     /**
@@ -192,6 +191,11 @@ abstract class AbstractUser implements UserInterface, HasRolesInterface
      */
     public function hasRole($role)
     {
-        return isset($this->roles[$role]);
+        foreach($this->roles as $userRole) {
+            if($userRole->getName() == $role)
+                return true;
+        }
+        
+        return false;
     }
 }

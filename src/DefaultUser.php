@@ -13,4 +13,11 @@ namespace Xidea\User;
  */
 class DefaultUser extends AbstractUser
 {
+    public function __construct()
+    {
+        $this->salt = md5(uniqid(null, true));
+        $this->roles = [
+            new DefaultRole('ROLE_USER')
+        ];
+    }
 }
