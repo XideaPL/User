@@ -9,7 +9,7 @@
 
 namespace Xidea\User\Tests\Unit;
 
-use Xidea\User\DefaultProfile;
+use Xidea\User\Profile\DefaultProfile;
 
 /**
  * @author Artur Pszczółka <artur.pszczolka@xidea.pl>

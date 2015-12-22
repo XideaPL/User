@@ -11,7 +11,7 @@ namespace Xidea\User;
 
 /**
  */
-class DefaultRole implements RoleInterface
+abstract class AbstractRole implements RoleInterface
 {
     /*
      * @var int
@@ -22,15 +22,7 @@ class DefaultRole implements RoleInterface
      * @var string
      */
     protected $name;
-    
-    /*
-     * 
-     */
-    public function __construct($name)
-    {
-        $this->name = $name;
-    }
-    
+
     /**
      * @inheritDoc
      */

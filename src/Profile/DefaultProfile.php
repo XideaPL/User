@@ -7,7 +7,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Xidea\User;
+namespace Xidea\User\Profile;
+
+use Xidea\User\AbstractProfile;
 
 /**
  */
