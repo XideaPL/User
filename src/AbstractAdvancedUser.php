@@ -22,7 +22,7 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
     /*
      * @var boolean
      */
-    protected $isEnabled;
+    protected $isEnabled = true;
     
     /*
      * @var string
@@ -48,15 +48,6 @@ abstract class AbstractAdvancedUser extends AbstractUser implements AdvancedUser
      * @var \DateTime
      */
     protected $lastLogin;
-
-    /**
-     * 
-     */
-    public function __construct()
-    {
-        $this->isEnabled = true;
-        parent::__construct();
-    }
     
     /**
      * @inheritDoc
