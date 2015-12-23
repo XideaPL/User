@@ -16,10 +16,12 @@ use Xidea\User\AbstractRole;
 class DefaultRole extends AbstractRole
 {
     /*
-     * 
+     * @param string $name
+     * @param string $role
      */
-    public function __construct($name)
+    public function __construct($name, $role)
     {
         $this->name = $name;
+        $this->role = $role;
     }
 }

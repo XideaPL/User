@@ -33,8 +33,8 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1, count($user->getRoles()));
         
         $user->setRoles([
-            new DefaultRole('ROLE_USER'),
-            new DefaultRole('ROLE_ADMIN')
+            new DefaultRole('User role', 'ROLE_USER'),
+            new DefaultRole('Admin role', 'ROLE_ADMIN')
         ]);
         
         $this->assertEquals(2, count($user->getRoles()));
@@ -46,7 +46,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
         
         $this->assertEquals(1, count($user->getRoles()));
         
-        $role = new DefaultRole('ROLE_ADMIN');
+        $role = new DefaultRole('Admin role', 'ROLE_ADMIN');
         $user->addRole($role);
         $this->assertEquals(2, count($user->getRoles()));
         

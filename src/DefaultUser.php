@@ -17,7 +17,7 @@ class DefaultUser extends AbstractUser
     {
         $this->salt = md5(uniqid(null, true));
         $this->roles = [
-            new Role\DefaultRole('ROLE_USER')
+            new Role\DefaultRole('User role', 'ROLE_USER')
         ];
     }
 }

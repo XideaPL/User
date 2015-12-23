@@ -22,6 +22,11 @@ abstract class AbstractRole implements RoleInterface
      * @var string
      */
     protected $name;
+    
+    /*
+     * @var string
+     */
+    protected $role;
 
     /**
      * @inheritDoc
@@ -45,5 +50,21 @@ abstract class AbstractRole implements RoleInterface
     public function setName($name)
     {
         $this->name = $name;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setRole($role)
+    {
+        $this->role = $role;
     }
 }

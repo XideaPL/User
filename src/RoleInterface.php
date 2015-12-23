@@ -35,4 +35,18 @@ interface RoleInterface
      * @param string
      */
     function setName($name);
+    
+    /**
+     * Gets the role.
+     * 
+     * @return string
+     */
+    function getRole();
+    
+    /**
+     * Sets the role.
+     * 
+     * @param string
+     */
+    function setRole($role);
 }
