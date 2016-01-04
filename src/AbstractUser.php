@@ -41,7 +41,7 @@ abstract class AbstractUser implements UserInterface, HasRolesInterface
     /*
      * @var array
      */
-    protected $roles;
+    protected $roles = [];
 
     /**
      * @inheritDoc
